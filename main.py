@@ -1,8 +1,11 @@
 import os
 import urllib.request
-from app import app
+import flask
 from flask import Flask, request, redirect, jsonify
 from werkzeug.utils import secure_filename
+
+app = Flask(__name__)
+app.config['DEBUG'] = True
 
 @app.route('/file-upload', methods=['POST'])
 def upload_file():
