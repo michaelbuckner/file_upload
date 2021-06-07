@@ -25,7 +25,7 @@ def upload_file():
     else:
         resp = jsonify({'message' : 'Allowed file types are txt, pdf, png, jpg, jpeg, gif'})
         resp.status_code = 400
-        return resp
+        return request
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
